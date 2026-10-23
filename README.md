@@ -5,8 +5,8 @@
 
 ![Réseaux viaires des six villes](figures/01_reseaux_six_villes.png)
 
-**Master 2 Géomatique et modélisation spatiale (GMS)**, Aix-Marseille Université · 2026-2027
-Cours *Modélisation de l'espace urbain par la syntaxe spatiale*, Thomas Gloaguen · **Projet individuel** · Présentation en anglais
+**Master 2 Géomatique et modélisation spatiale (GMS)**, Aix-Marseille Université | 2026-2027
+Cours *Modélisation de l'espace urbain par la syntaxe spatiale*, Thomas Gloaguen | **Projet individuel** | Présentation en anglais
 
 ---
 
@@ -21,12 +21,12 @@ Six villes aux formes très différentes (grille, maillage pavillonnaire, ville 
 
 | Indice | Ce qu'il mesure | Comparable entre villes ? |
 |---|---|---|
-| **Mean Depth** | Nombre moyen de pas d'un segment vers tous les autres | ❌ dépend de la taille |
-| **RA** | Mean Depth ramené entre 0 et 1 : `2(MD − 1) / (n − 2)` | ❌ dépend encore de la taille |
-| **RRA** | RA divisé par une valeur de référence Dₙ pour un système de même taille | ✅ **l'indice de comparaison** (faible = intégré) |
-| **Integration HH** | `1 / RRA` | ✅ (élevé = intégré) |
-| **Choice** | Nombre de plus courts chemins passant par un segment (flux de transit) | ❌ croît avec la taille |
-| **Choice norm** | Choice normalisé (on lit son maximum et sa dispersion) | ✅ |
+| **Mean Depth** | Nombre moyen de pas d'un segment vers tous les autres | Non, dépend de la taille |
+| **RA** | Mean Depth ramené entre 0 et 1 : `2(MD - 1) / (n - 2)` | Non, dépend encore de la taille |
+| **RRA** | RA divisé par une valeur de référence Dₙ pour un système de même taille | Oui, **l'indice de comparaison** (faible = intégré) |
+| **Integration HH** | `1 / RRA` | Oui, (élevé = intégré) |
+| **Choice** | Nombre de plus courts chemins passant par un segment (flux de transit) | Non, croît avec la taille |
+| **Choice norm** | Choice normalisé (on lit son maximum et sa dispersion) | OK |
 
 ## Résultats
 
@@ -43,7 +43,7 @@ Six villes aux formes très différentes (grille, maillage pavillonnaire, ville 
 
 ![RA vs RRA](figures/02_ra_vs_rra.png)
 
-- **La taille fausse le RA.** Avec le RA, Cumbernauld paraît la plus intégrée, seulement parce que c'est la plus grande ville. Avec le RRA, elle tombe au 4ᵉ rang.
+- **La taille fausse le RA.** Avec le RA, Cumbernauld paraît la plus intégrée, seulement parce que c'est la plus grande ville. Avec le RRA, elle tombe au 4e rang.
 - **La forme fait l'intégration.** Les réseaux maillés (Keerbergen, la grille de La Carolina, le noyau de Nördlingen) sont peu profonds. Les réseaux hiérarchisés (Cumbernauld), linéaires (Suloszowa) ou dispersés (Saint-Nectaire) sont profonds.
 - **Choice révèle la structure.** Une grille répartit les flux sur de nombreux itinéraires (La Carolina : 0,44). Un réseau en arbre les concentre : à Saint-Nectaire, un seul axe porte presque tous les plus courts chemins (0,99).
 
@@ -68,15 +68,13 @@ Ces indices aident à repérer les axes structurants et les quartiers enclavés,
 
 ## Outils
 
-`DepthmapX` · analyse de segments · `Python` (graphiques)
+`DepthmapX` | analyse de segments | `Python` (graphiques)
 
 ## Contenu du dépôt
 
-```
-├── figures/        réseaux des 6 villes, RA vs RRA, Choice norm
-└── presentation/   support de présentation (PDF, anglais)
-```
+- `figures/` : réseaux des 6 villes, RA vs RRA, Choice norm
+- `presentation/` : support de présentation (PDF, anglais)
 
 ---
 
-**Auteur :** Ezechiel Agbewanou SOUKOU, géomaticien-urbaniste · [LinkedIn](https://www.linkedin.com/in/ezechiel-soukou) · [Autres projets](https://github.com/ezekielofficiel7-spec)
+**Auteur :** Ezechiel Agbewanou SOUKOU, géomaticien-urbaniste | [LinkedIn](https://www.linkedin.com/in/ezechiel-soukou) | [Autres projets](https://github.com/ezekielofficiel7-spec)
